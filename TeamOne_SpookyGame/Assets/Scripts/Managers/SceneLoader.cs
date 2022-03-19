@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
+    
     private static SceneLoader mySceneLoader = null;
 
     //Keeps track of what level should be loaded
@@ -27,6 +27,7 @@ public class SceneLoader : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     //Loads the selected level
