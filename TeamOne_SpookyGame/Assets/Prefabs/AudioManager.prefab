@@ -48,5 +48,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6fd7ac9fc7a1d93409fd996fa1415b4b, type: 2}
   - {fileID: 11400000, guid: e54a9890c177d0043aac93c7d3a1e44d, type: 2}
   - {fileID: 11400000, guid: 4534e24ae74f2d14596b7805d2f8a973, type: 2}
+  - {fileID: 11400000, guid: b548be001db44e148b38bb966973ec6f, type: 2}
   music:
   - {fileID: 11400000, guid: 77ede6a2f68a18349a9be5c654d51933, type: 2}

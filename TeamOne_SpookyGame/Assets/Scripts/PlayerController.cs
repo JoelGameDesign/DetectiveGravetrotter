@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     //The direction the player is moving
     Vector2 moveDir;
+    public bool canMove;
 
     void Awake()
     {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         grabbedBox = null;
         hasKey = false;
+
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour
     {
 
         //If the player isn't moving, add artificial friction
-        if (moveDir.magnitude == 0)
+        if (moveDir.magnitude == 0 || !canMove)
         {
             rb.velocity = new Vector3(rb.velocity.x * frictionAmnt, rb.velocity.y, rb.velocity.z * frictionAmnt);
 
