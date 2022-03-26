@@ -232,9 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - Level 1
   - Level 2
-  - Level 3
+  - Level 7
+  - Level 8
 --- !u!4 &666868340
 Transform:
   m_ObjectHideFlags: 0
