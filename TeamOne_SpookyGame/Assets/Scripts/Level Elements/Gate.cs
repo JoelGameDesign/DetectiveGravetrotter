@@ -7,6 +7,12 @@ public class Gate : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Material gateClosed;
     [SerializeField] Material gateOpen;
+    AudioManager AM;
+
+    private void Awake()
+    {
+        AM = FindObjectOfType<AudioManager>();
+    }
 
     BoxCollider myBoxCollider;
     private void Start()
@@ -17,6 +23,7 @@ public class Gate : MonoBehaviour
     public void OpenGate()
     {
         myBoxCollider.enabled = false;
+        AM.PlaySFX("GateOpen");
         gameObject.GetComponent<MeshRenderer>().material = gateOpen;
     }
 
