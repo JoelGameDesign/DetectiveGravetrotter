@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sightline : MonoBehaviour
 {
 
-    [SerializeField] float maxLength;
+    [SerializeField] public float maxLength;
     // Start is called before the first frame update
     void Start()
     {

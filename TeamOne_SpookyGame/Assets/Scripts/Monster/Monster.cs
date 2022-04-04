@@ -46,7 +46,7 @@ public class Monster : MonoBehaviour
     {
         Vector3 rayCastPos = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
         RaycastHit hit;
-        if (Physics.Raycast(rayCastPos, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        if (Physics.Raycast(rayCastPos, transform.TransformDirection(Vector3.forward), out hit, sightline.maxLength))
         {
             //Debug.DrawRay(rayCastPos, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             sightline.SetDistance(hit.distance);
@@ -56,6 +56,9 @@ public class Monster : MonoBehaviour
                 hitPosition = hit.collider.gameObject.transform.position;
                 StartCoroutine(AttackPlayer());
             }
+        } else
+        {
+            sightline.SetDistance(sightline.maxLength);
         }
 
     }
